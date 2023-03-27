@@ -1,0 +1,214 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+  .nav-left { grid-area: nav-left; }
+  
+  .nav-center { grid-area: nav-center; }
+  
+  .nav-right { grid-area: nav-right; }
+  
+.container {
+    display: grid;
+    grid-template-columns: 20% auto auto auto auto;
+    grid-template-rows: 15% auto auto auto;
+    gap: 5% 5%;
+    grid-auto-flow: column dense;
+    grid-template-areas:
+        "Header Header Header Header Header"
+        "SideBar video1 video2 video3 video4"
+        "SideBar video5 video6 video7 video8"
+        "SideBar video9 video10 video11 video12";
+}
+
+.Header {
+    grid-area: Header;
+    margin: 2%;
+    display: flex;
+    justify-content: space-between;
+}
+.nav-center {
+    display: flex;
+    
+}
+#btn-menu {
+    border: none;
+    background-color: rgb(255, 255, 255);
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+#btn-menu:hover {
+    border: none;
+    transition: all 1s ease-in-out;
+    scale: 1.1;
+
+}
+#search {
+    text-align: center;
+    font-size: 16px;
+    display: flex;
+    width: 300px;
+    height: 32px;
+}
+
+#btn-search {
+    height: 32px;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+@keyframes magnifying-glass {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(20deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+
+}
+#btn-search:hover {
+    animation: magnifying-glass 0.5s ease-in-out;
+}
+#btn-camera {
+
+    height: 32px;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+    padding-right: 20px;
+}
+
+#btn-camera:hover {
+    scale: 1.1;
+    color: red;
+    transition: all 1.5s ease;
+}
+
+#btn-notification {
+    padding-right: 20px;
+
+    height: 32px;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+}
+
+@keyframes magnifying-bell {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(20deg);
+    }
+
+    100% {
+        transform: rotate(-20deg);
+    }
+
+}
+
+#btn-notification:hover {
+    animation: magnifying-bell 0.5s ease-in-out infinite;
+}
+
+#profile-img {
+    width: 32px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#profile-img:hover {
+    transform: scale(1.1);
+    transition: all 1s ease;
+}
+
+
+
+.SideBar {
+    display: flex;
+    justify-content: center;
+    grid-area: SideBar;
+    font-size: 20px;
+    padding-left: 5px;
+   
+}
+.SideBar > nav > ul {
+    list-style: none;
+}
+li {
+    margin-bottom: 10px;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+
+  a:hover {
+    color: #ff6347;
+    transition: ease-in 1s linear;
+  }
+  
+  
+ i {
+    margin-right: 15px;
+}
+.video1 {
+    grid-area: video1;
+}
+
+.video2 {
+    grid-area: video2;
+}
+
+.video3 {
+    grid-area: video3;
+}
+
+.video4 {
+    grid-area: video4;
+}
+
+.video5 {
+    grid-area: video5;
+}
+
+.video6 {
+    grid-area: video6;
+}
+
+.video7 {
+    grid-area: video7;
+}
+
+.video8 {
+    grid-area: video8;
+}
+
+.video9 {
+    grid-area: video9;
+}
+
+.video10 {
+    grid-area: video10;
+}
+
+.video11 {
+    grid-area: video11;
+}
+
+.video12 {
+    grid-area: video12;
+}
