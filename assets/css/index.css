@@ -4,6 +4,9 @@
     box-sizing: border-box;
 }
 
+body {
+    width: 100%;
+}
 
 .nav-left {
     grid-area: nav-left;
@@ -18,10 +21,11 @@
 }
 
 .container {
+    max-width: 100%;
     display: grid;
-    grid-template-columns: 20% auto auto auto auto;
+    grid-template-columns: 20% auto;
     grid-template-rows: 15% auto auto auto;
-    gap: 5% 5%;
+    gap: 1% 1%;
     grid-auto-flow: column dense;
     grid-template-areas:
         "Header Header Header Header Header"
@@ -181,25 +185,69 @@ i {
 
 .video1 {
     grid-area: video1;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 50% 50%;
-    gap: 0px 5%;
-    grid-auto-flow: row;
-    grid-template-areas:
-      "video-top"
-      "video-down";
 }
 
-.video-top { grid-area: video-top; }
-  
+.video-top {
+    grid-area: video-top;
+}
+
+.video-top img {
+    width: 100%;
+}
+
 .video-down {
-     grid-area: video-down; 
-     display: flex;
+    grid-area: video-down;
+}
+
+.video-down img {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+.video-down {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 4px 12px;
+    grid-auto-flow: row;
+    justify-content: start;
+    align-content: start;
+    justify-items: start;
+    align-items: start;
+    grid-template-areas:
+        "video-thumbnail title-video"
+        "video-thumbnail description-video";
+}
+
+.video-thumbnail {
+    grid-area: video-thumbnail;
+    justify-content: start;
+    align-content: start;
+    justify-items: start;
+    align-items: start;
+}
+
+.title-video {
+    grid-area: title-video;
+    justify-content: start;
+    align-content: start;
+    justify-items: start;
+    align-items: start;
+}
+
+.description-video {
+    grid-area: description-video;
+    justify-content: start;
+    align-content: start;
+    justify-items: start;
+    align-items: start;
 }
 
 .video2 {
     grid-area: video2;
+
 }
 
 .video3 {
@@ -240,4 +288,62 @@ i {
 
 .video12 {
     grid-area: video12;
+}
+
+/* layout de grid para telas menores */
+@media screen and (max-width: 480px) {
+    .Header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: auto;
+    }
+
+    .nav-left {
+        justify-content: center;
+        margin: auto;
+        padding-top: 30px;
+        padding-bottom: 30px;
+
+    }
+    #logo {
+        width: 200px;
+    }
+    #search {
+        height: 50px;
+    }
+
+    .SideBar {
+        padding-top: 30px;
+    }
+
+    #btn-menu {
+        display: none;
+    }
+     .nav-center {
+      align-items: center;
+    }
+    .nav-right {
+        display: none;
+    }
+
+    .container {
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "Header"
+            "SideBar"
+            "video1"
+            "video2"
+            "video3"
+            "video4"
+            "video5"
+            "video6"
+            "video7"
+            "video8"
+            "video9"
+            "video10"
+            "video11"
+            "video12";
+    }
 }
