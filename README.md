@@ -4,6 +4,9 @@ This is a project carried out during the CSS Web Developer Training, with the ob
 
 ## Description
 
+![FireShot Capture 002 - Listagem do youtube com grid layout - 127 0 0 1](https://user-images.githubusercontent.com/122818137/228638575-9c9cc8a6-992d-4289-a3be-14cddbabdf24.png)
+![mobile (2)](https://user-images.githubusercontent.com/122818137/228638670-38bba94d-68fe-4507-85fd-4e100d163ec8.png)
+
 The project consists of using the CSS Grid Layout properties to create a video listing similar to the one presented on the YouTube page. Grid Layout lets you organize content into rows and columns, making creating complex layouts simpler and more efficient.
 
 ## Technologies used
